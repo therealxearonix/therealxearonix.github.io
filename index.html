@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="projects.html">Мои проекты</a>
+            </div>
+            <button id="themeToggle" class="theme-toggle">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="top-section">
+            <div class="about_me">
+                <h1>Привет</h1>
+                <p>Я Станислав, начинающий веб-разработчик. Проектов в моем портфолио не так много, но я постоянно развиваюсь и добаляю сюда много нового.</p>
+                <p>У меня пока что немного опыта в создании сайтов, и если у вас, например, есть какой-то небольшой заказ, то готов бесплатно выполнить его!</p>
+                <p>Если у вас есть какие то вопросы или вы хотите со мной посотрудничать, то вы можете написать мне на электронную почту через форму ниже.</p>
+            </div>
+            <div class="me">
+                <img src="media\me.png" alt="я" width="15%" class="my_photo">
+            </div>
+            <div class="social_media">
+                <div class="tg"><a target="_blank" href="https://t.me/Xearonix"><img src="media\tg.png" alt="telegram" width="35px"></a></div>
+                <div class="vk"><a target="_blank" href="https://vk.com/therealxearonix"><img src="media\vk.png" alt="vk" width="35px"></a></div>
+            </div>
+        </div>
+        <div class="email-form">
+            <h2>Есть вопросы? Напишите, отвечу!</h2>
+            <form id="emailForm" onsubmit="return sendEmail(event)">
+                <div class="form-group">
+                    <label for="subject">Тема:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="alert">
+                    <p>Внимание! После нажатия кнопки "Отправить" письмо не будет автоматически отправлено на мою почту, пожалуйста, дождитесь загрузки вашего почтового клиента. И уже в нем подтвердите отправку.</p>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

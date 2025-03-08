@@ -1,0 +1,257 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #292929;
+    --header-text: #ffffff;
+    --form-bg: #ffffff;
+    --form-border: #ccc;
+    --input-bg: #ffffff;
+    --input-border: #ddd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --header-bg: #000000;
+    --header-text: #ffffff;
+    --form-bg: #2d2d2d;
+    --form-border: #404040;
+    --input-bg: #3d3d3d;
+    --input-border: #404040;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.about_me {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.me {
+    flex: 0 0 auto;
+}
+
+.my_photo {
+    max-width: 300px;
+    width: 90%;
+    border-radius: 10px;
+    float: right;
+}
+
+.tg, .vk {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.social_media {
+    margin-left: 7px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.email-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--form-bg);
+    border-color: var(--form-border);
+}
+
+.email-form h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-color);
+}
+
+textarea {
+    height: 150px;
+}
+
+.alert {
+    color: red;
+}
+
+button {
+    background-color: #4c7aaf;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #4c7aaf;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #4c7aaf;
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+@media (max-width: 500px) {
+    main {
+        padding: 10px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about_me {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .my_photo {
+        float: none;
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .social_media {
+        margin: 20px 0;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .email-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .alert {
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        position: relative;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .theme-toggle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+header a {
+    color: var(--header-text);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #3608dd;
+    transition: 0.3s;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-icon {
+    font-size: 20px;
+}
